@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- DaisyUI link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- link custom CSS -->
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="md:w-[80%] mx-auto">
+        <!-- nav bar -->
+        <nav class="py-9">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 raleway font-medium text-[18px] text-[#030712B3]">
+                      <li>Home</li>
+                      <li>About</li>
+                      <li>Destination</li>
+                      <li>Search</li>
+                    </ul>
+                  </div>
+                  <a class="btn btn-ghost raleway font-extrabold text-4xl text-[#030712]">P-Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1 gap-8 raleway font-medium text-[18px] text-[#030712B3]">
+                    <li class="cursor-pointer">Home</li>
+                      <li class="cursor-pointer">About</li>
+                      <li class="cursor-pointer">Destination</li>
+                      <li class="cursor-pointer">Search</li>
+                  </ul>
+                </div>
+                <div class="navbar-end">
+                  <a class="btn bg-[#1DD1001A] raleway font-bold text-xl text-[#1DD100]">Bus <img src="images/bus-icon.png" alt=""></a>
+                </div>
+              </div>
+        </nav>
+        <!-- banner section -->
+        <section class="mb-24">
+            <div class="hero pt-[70px] pb-[136px] rounded-3xl" style="background-image: url(images/banner.png);">
+                <div class="hero-content text-center text-neutral-content">
+                  <div class="">
+                    <h1 class="mb-5 raleway font-extrabold text-6xl text-[#FFFFFF] leading-[80px]">End-to-End Travel with <br> <span class="text-[#1DD100]">P Paribahan</span> </h1>
+                    <p class="mb-5 inter font-normal text-[18px] text-white">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
+                    <button class="btn bg-[#1DD100] border-none raleway font-bold text-xl text-[#030712]">Buy Tickets</button>
+                  </div>
+                </div>
+              </div>
+        </section>
+        <!-- Best offers Section -->
+        <section>
+            <h2 class="text-center raleway font-bold text-4xl mb-9">Best offers for you</h2>
+            <div class="flex flex-col md:flex-row gap-6 mb-[55px]">
+                <!-- 15 % OFF Coupon -->
+                <div class="flex">
+                    <div class="left p-[52px] bg-[#FFBF0F] rounded-l-lg "><h2 class="inter font-black text-[40px] leading-[36px] text-[#030712CC]">15% OFF</h2>
+                    <p class="inter font-semibold text-[20px] leading-[36px] text-[#030712CC]">on your next purchase <br> 
+                        <small class="inter font-medium text-[18px] text-[#03071280]">
+                            use by January 2024
+                        </small>
+                    </p>
+                    </div>
+                    <div class="right py-[66px] px-[52px] bg-[#FFBF0F] rounded-r-lg border-l-2 border-dashed border-white relative">
+                        <h2 class="raleway font-bold text-[32px] text-[#030712]">NEW<sub>15</sub></h2>
+                        <p class="raleway font-medium text-xl text-[#03071266]">Coupon Code</p>
+
+                    </div>
+                </div>
+                <!-- 20 % OFF Coupon -->
+                <div class="flex">
+                    <div class="left p-[52px] bg-[#FFBF0F] rounded-l-lg "><h2 class="inter font-black text-[40px] leading-[36px] text-[#030712CC]">20% OFF</h2>
+                    <p class="inter font-semibold text-[20px] leading-[36px] text-[#030712CC]">on your next purchase <br> 
+                        <small class="inter font-medium text-[18px] text-[#03071280]">
+                            use by January 2024
+                        </small>
+                    </p>
+                    </div>
+                    <div class="right py-[66px] px-[52px] bg-[#FFBF0F] rounded-r-lg border-l-2 border-dashed border-white relative">
+                        <h2 class="raleway font-bold text-[32px] text-[#030712]">Couple 20</h2>
+                        <p class="raleway font-medium text-xl text-[#03071266]">Coupon Code</p>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+           <div class="flex justify-center">
+            <button class="py-5 px-7 border-2 border-[#1DD100] rounded-xl raleway font-bold text-xl text-[#1DD100]">See All Offers</button>
+           </div>
+        </section>
+    </header>
+</body>
+</html>
