@@ -27,6 +27,7 @@ for (let i = 0; i < btn.length; i++) {
         totalSelectedSeat.innerText = totalCount;
         if (totalCount < 5) {
             seat.style.backgroundColor = '#1dd100';
+            seat.style.color = 'white';
             const totalSeatElement = document.getElementById('total-seat');
             let seatCount = parseInt(totalSeatElement.innerText);
             const seatLeft = seatCount - 1;
@@ -82,7 +83,7 @@ couponBtn.addEventListener('click', function () {
         grandTotal.innerText = totalPrice - descountPrice;
     }
     else{
-        alert('Invelitet Copune!')
+        alert('Invalid Copune!')
     }
 });
 

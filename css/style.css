@@ -2,6 +2,9 @@
 .raleway{
     font-family: "Raleway", sans-serif;
 }
+*{
+    scroll-behavior: smooth;
+}
 .inte{
     font-family: "Inter", sans-serif;
 }
