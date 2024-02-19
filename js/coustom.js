@@ -1,17 +1,21 @@
-
-
 const btn = document.querySelectorAll('.seat-number');
 let totalCount = 0;
 let totalPrice = 0;
 const coupon1 = 'NEW15';
 const coupon2 = 'Couple 20';
 const grandTotal = document.getElementById('grand-total');
+const array = [];
 
-for (let i = 0; i < btn.length; i++){
+for (let i = 0; i < btn.length; i++) {
     const seat = btn[i];
-    seat.addEventListener('click',function(event){
-        
-        
+    seat.addEventListener('click', function(event) {
+        const seatNumber = event.target.innerText;
+
+        // Check if the seat has already been selected
+        if (array.includes(seatNumber)) {
+            alert("This seat has already been selected.");
+            return;
+        }
 
         const totalSelectedSeat = document.getElementById('count');
         let selectedSeatCount = parseInt(totalSelectedSeat.innerText);
@@ -21,36 +25,39 @@ for (let i = 0; i < btn.length; i++){
         }
         totalCount = selectedSeatCount + 1;
         totalSelectedSeat.innerText = totalCount;
-        if(totalCount < 5){
+        if (totalCount < 5) {
             seat.style.backgroundColor = '#1dd100';
             const totalSeatElement = document.getElementById('total-seat');
-        let seatCount = parseInt(totalSeatElement.innerText);
-        const seatLeft = seatCount - 1;
-        totalSeatElement.innerText = seatLeft;
-        const p = document.createElement('p');
-        p.innerText = event.target.innerText;
-        document.getElementById('seat-name').appendChild(p);
-        
-        const p2 = document.createElement('p');
-        p2.innerText ='economy class';
-        document.getElementById('class-name').appendChild(p2);
+            let seatCount = parseInt(totalSeatElement.innerText);
+            const seatLeft = seatCount - 1;
+            totalSeatElement.innerText = seatLeft;
+            const p = document.createElement('p');
+            array.push(seatNumber);
 
-        const p3 = document.createElement('p');
-        const price = 550
-        p3.innerText = price;
-        document.getElementById('price').appendChild(p3);
-        totalPrice = totalPrice + price;
-        const totalPriceId = document.getElementById('total-price');
-        totalPriceId.innerText = totalPrice;
-        
-        
-        grandTotal.innerText = totalPrice;
-        if(totalCount === 4){
-            couponBtn.removeAttribute('disabled');
-            couponBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+            p.innerText = seatNumber;
+            document.getElementById('seat-name').appendChild(p);
+
+            const p2 = document.createElement('p');
+            p2.innerText = 'economy class';
+            document.getElementById('class-name').appendChild(p2);
+
+            const p3 = document.createElement('p');
+            const price = 550;
+            p3.innerText = price;
+            document.getElementById('price').appendChild(p3);
+            totalPrice = totalPrice + price;
+            const totalPriceId = document.getElementById('total-price');
+            totalPriceId.innerText = totalPrice;
+
+            grandTotal.innerText = totalPrice;
+            if (totalCount === 4) {
+                couponBtn.removeAttribute('disabled');
+                couponBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+            }
         }
-}});
+    });
 };
+
 
 const couponBtn = document.getElementById('coupon-btn');
 couponBtn.addEventListener('click', function () {
