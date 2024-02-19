@@ -95,7 +95,7 @@
            </div>
         </section>
     </header>
-    <main class="mt-28 bg-gray-100 box-border border-t-2 border-green-500 rounded-t-3xl">
+    <main id="main" class="mt-28 bg-gray-100 box-border border-t-2 border-green-500 rounded-t-3xl">
       <section  class="mt-10 md:mt-28 w-[95%] md:w-[80%] mx-auto mb-3 md:mb-[26px]">
         <h2 class="text-black raleway text-2xl md:text-3xl font-bold leading-8 md:leading-12 text-center">P.H Paribahan</h2>
         <p class="text-gray-600 inter text-base font-normal leading-7 text-center mt-6 mb-9">Yes, you can run unit tests and view the results directly within the app. The integrated <br> testing features allow for a streamlined .</p>
@@ -297,7 +297,7 @@
           </div>
           </div>
           <!-- Select Your Seat area -->
-          <div class="p-4 md:p-8 border-l-2 border-dashed border-[#0307124D]">
+          <div class="md:p-8 md:border-l-2 border-dashed border-[#0307124D]">
             <h2 class="raleway font-semibold text-lg leading-7 text-[#030712]">Select Your Seat</h2>
             <hr class="border border-dashed border-gray-400 mt-5">
             <div class="bg-[#F7F8F8] rounded-xl p-8 mt-6">
@@ -339,15 +339,15 @@
               </div>
             </div>
             <!-- user info -->
-            <div>
-              <div><label for="">Passenger Name*</label></div>
-              <div><input type="text" name="" id="" placeholder="Enter your name"></div>
-              <div><label for="">Phone Number*</label></div>
-                <div><input id="mobile" class="" type="tel" name="" id="" placeholder="Enter your phone number"></div>
-                <div><label for="">Email ID</label></div>
-                <div><input type="email" name="" id="" placeholder="Enter your email id"></div>
+            <div class="mt-6">
+              <div><label class="inter text-base font-medium mb-4" for="">Passenger Name*</label></div>
+              <div><input class="p-4 outline-none box-border border border-gray-100 rounded-lg w-full" type="text" name="" id="" placeholder="Enter your name"></div>
+              <div class="mt-4"><label class="inter text-base font-medium" for="">Phone Number*</label></div>
+                <div><input id="mobile" class="p-4 outline-none box-border border border-gray-100 rounded-lg w-full" type="tel" name="" id="" placeholder="Enter your phone number"></div>
+                <div class="mt-4"><label class="inter text-base font-medium" for="">Email ID</label></div>
+                <div><input class="p-4 outline-none box-border border border-gray-100 rounded-lg w-full" type="email" name="" id="" placeholder="Enter your email id"></div>
                 
-                 <button id="nex-btn" class="px-4 bg-[#1DD100] text-white opacity-50 cursor-not-allowed" disabled>Next</button>
+                 <button id="nex-btn" class="mt-6 py-3 w-full text-center rounded-lg bg-[#1DD100] text-[20px] text-white opacity-50 cursor-not-allowed" disabled>Next</button>
                 
               
             </div>
@@ -358,8 +358,18 @@
         </div>
 
       </section>
+
+     
  
     </main>
+    <div id="popup" class="hidden text-center flex flex-col items-center justify-center bg-[#e5e5e6] p-[57px] w-[600px] mx-auto" >
+      <img src="images/success.png" alt="">
+      <h2>SUCCESS</h2>
+      <p>Thank you for Booking Our Bus Seats. <br> 
+        We are working hard to find the best service and deals for you. <br> 
+        Shortly you will find a confirmation in your email.</p>
+        <button>Continue</button>
+    </div>
     <script src="js/coustom.js"></script>
     <!-- <script src="js/app.js"></script> -->
 </body>

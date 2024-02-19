@@ -92,8 +92,10 @@ mobileNumber.addEventListener('input', function() {
     }
 });
 nexBtn.addEventListener('click', function(){
-    document.getElementById('header').classList.add('hidden')
-})
+    document.getElementById('header').classList.add('hidden');
+    document.getElementById('main').classList.add('hidden')
+    document.getElementById('popup').classList.remove('hidden')
+});
 
 
 
