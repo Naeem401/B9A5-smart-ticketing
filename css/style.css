@@ -22,3 +22,20 @@
 .right::after{
     bottom: -10px;
 }
+.price::before,
+.price::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: #f3f4f6;
+    border-radius: 50%;
+    left: -15px;
+}
+.price::before{
+   top: -15px;
+}
+.price::after{
+    bottom: -15px;
+}
